@@ -1,4 +1,4 @@
-@extends('component.layout')
+@extends('components.layout')
 @section('title','Popmovies - Watch Online Movies & TV Shows')
 @section('body')
     <header class="bg-no-repeat bg-cover relative p-2" style="background-image: url({{asset('assets/image/Wallpaper/avanger_wall.png')}})">
@@ -16,7 +16,7 @@
                         <li><a href="">Trending</a></li>
                         <li><a href="">Latest Release</a></li>
                     </ul>
-                    <section class="mb-2 w-full flex">
+                    <section class="mb-2 w-full flex mt-3">
                         <div class="relative" style="width:600px">
                             <input type="text" placeholder="Search your movie..." id="search" class="w-full h-9 rounded-lg px-5 bg-gray-800 opacity-60 pl-10">
                             <button class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <div class="relative z-20" style="height: 30rem;width: 45rem">
+            <div class="relative z-20" style="height: 30rem;width: 60rem">
                 <img src="{{asset('assets/image/Wallpaper/index_banner.svg')}}" alt="Top Anime" class="w-full h-full object-center">
             </div>
             <div class="absolute z-20 self-end flex justify-center bottom-0">
@@ -46,7 +46,7 @@
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/whatsapp.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
         </div>
     </div>
-    <div class="absolute w-screen bg-black top-0 z-10 opacity-65" style="height: 42rem"></div>
+    <div class="absolute w-screen bg-black top-0 z-10 opacity-65 border-b-2 shadow-xl shadow-gray-300" style="height: 43rem"></div>
     <main class="flex justify-center">
         <div class="container w-7/12 mb-14 mt-5">
             <h1 class="font-bold text-center text-slate-600 p-5 text-2xl">Welcome to Popmovies - Your Premier Free Streaming Destination</h1>

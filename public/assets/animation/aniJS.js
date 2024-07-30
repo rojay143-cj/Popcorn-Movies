@@ -29,8 +29,7 @@ $(function () {
     const navBar = $("#nav-bar");
     const opensidebar = $(".open-side-bar");
     function handleNavBarVisibility() {
-        if ($(window).width() > 768) {
-            navBar.removeClass('hidden');
+        if ($(window).width() > 1024) {
             $('.logo').removeClass('translate-x-3');
         }else{
             navBar.addClass('hidden');

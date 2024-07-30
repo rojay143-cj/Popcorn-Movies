@@ -31,8 +31,10 @@ $(function () {
     function handleNavBarVisibility() {
         if ($(window).width() > 768) {
             navBar.removeClass('hidden');
+            $('.logo').removeClass('translate-x-3');
         }else{
             navBar.addClass('hidden');
+            $('.logo').addClass('translate-x-3');
         }
     }
     $(".open-side-bar").on("click", function () {
@@ -53,6 +55,4 @@ $(function () {
         handleNavBarVisibility();
     });
     handleNavBarVisibility();
-
-    // Hide the nav-bar if I open the sidebar in bigger screen
 });

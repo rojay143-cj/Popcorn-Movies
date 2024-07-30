@@ -4,9 +4,10 @@
     <header class="bg-no-repeat bg-cover relative p-2" style="background-image: url({{asset('assets/image/Wallpaper/avanger_wall.png')}})">
         <div class="relative z-50">
             <div class="w-full h-full flex justify-center items-center flex-col">
-                <div class="w-50 h-28">
-                    <a href="/"><img src="{{asset('assets/image/logo/logo_pink_nobg.png')}}" alt="Watch Movie Here" class="w-full h-full"></a>
-                </div>
+                <span class="flex items-center"><img src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-20 h-15">
+                    <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span> 
+                    <span class="tracking-wider font-italic text-3xl font-bold text-red-600">movies</span>
+                </span>
                 <section class="mt-5">
                     <ul class="inline-flex gap-10 text-sm font-medium flex-wrap md:flex justify-center">
                         <li><a href="{{route('homepage')}}">Home</a></li>
@@ -28,14 +29,14 @@
         </div>
         <div class="flex justify-center">
             <div class="relative z-20" style="height: 30rem;width: 45rem">
-                <img src="{{asset('assets/image/Wallpaper/pop_anime.png')}}" alt="Top Anime" class="w-full h-full object-center">
+                <img src="{{asset('assets/image/Wallpaper/index_banner.svg')}}" alt="Top Anime" class="w-full h-full object-center">
             </div>
             <div class="absolute z-20 self-end flex justify-center bottom-0">
                 <a href="{{route('homepage')}}" class="bg-yellow-500 hover:bg-yellow-600 text-slate-700 font-bold py-2 px-4 rounded-xl">Visit Homepage <i class="fa-solid fa-circle-right fa-xl ml-2"></i></a>
             </div>
         </div>
     </header>
-    <div class="flex justify-center z-20 relative mt-5">
+    <div class="flex justify-center z-20 relative mt-10">
         <div class="flex gap-10 justify-center">
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/facebook.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/instagram.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
@@ -45,9 +46,9 @@
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/whatsapp.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
         </div>
     </div>
-    <div class="absolute w-screen bg-black top-0 z-10 opacity-65" style="height: 45rem"></div>
+    <div class="absolute w-screen bg-black top-0 z-10 opacity-65" style="height: 44rem"></div>
     <main class="flex justify-center">
-        <div class="container w-7/12 mb-14">
+        <div class="container w-7/12 mb-14 mt-10">
             <h1 class="font-bold text-center text-slate-600 p-5 text-2xl">Welcome to Popmovies - Your Premier Free Streaming Destination</h1>
             <p class="mb-6 text-sm">In late 2016, we observed that many free movie streaming sites lacked an intuitive user interface (UI) and a seamless user experience (UX). To address this, our dedicated product development team launched Popmovies, aiming to deliver a superior streaming platform for all movie enthusiasts.</p>
 

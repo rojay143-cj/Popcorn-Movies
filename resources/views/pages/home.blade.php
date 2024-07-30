@@ -3,25 +3,30 @@
 @section('body')
 <header class=" bg-zinc-900 h-16 p-5 text-sm flex justify-between shadow-2xl">
     <div class="flex items-center">
-        <button class="open-side-bar" title="Open Menu"><i class="fa-solid fa-bars fa-xl"></i></button>
-        <span class="-translate-y-1 translate-x-3"><img src="{{asset('assets/image/logo/logo_pink_nobg.png')}}"
-                alt="Movie Online" class="w-20 h-15"></span>
+        <button class="open-side-bar md:hidden" title="Open Menu"><i class="fa-solid fa-bars fa-xl"></i></button>
+        <span class="-translate-y-1 translate-x-3 flex items-center logo"><img src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-10 h-12">
+            <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span> 
+            <span class="tracking-wider font-italic text-3xl font-bold text-red-600">movies</span>
+        </span>
     </div>
     <nav id="side-bar" class="bg-zinc-800 p-5 fixed h-full top-0 -left-96 shadow-2xl duration-500">
         <section class="p-5 text-lg font-thin">
             <ul class="p-2 pl-3">
                 <li class="mt-5"><a href="{{route('homepage')}}">Home</a></li>
-                <li class="drp-genre mt-5">Movies<i class="fa-solid fa-angle-down ml-1 cursor-pointer"></i></li>
+                <li class="drp-genre mt-5 cursor-pointer">Movies<i class="fa-solid fa-angle-down ml-1"></i></li>
                 <li class="mt-5"><a href="">Trending</a></li>
                 <li class="mt-5"><a href="">Latest Release</a></li>
             </ul>
         </section>
         <div class="w-full h-9 relative">
-            <input type="text" name="search" id="search" placeholder="Search a movie..."
-                class="w-full h-full rounded-lg px-11 bg-yellow-500 opacity-75 text-yellow-950 font-medium text-md placeholder:text-yellow-950 outline-offset-3 outline-yellow-400 outline-8">
-            <button class="absolute inset-y-0 left-0 p-3 flex items-center text-gray-400 bg-yellow-600 rounded-l-lg">
-                <i class="fa-solid fa-magnifying-glass text-yellow-950"></i>
+            <input type="text" placeholder="Search your movie..." id="search" class="w-full h-9 rounded-lg px-5 bg-gray-800 opacity-60 pl-10">
+            <button class="absolute inset-y-0 left-0 p-2 flex items-center text-gray-400 bg-gray-700 rounded-l-lg">
+                <i class="fa-solid fa-magnifying-glass text-gray-900"></i>
             </button>
+        </div>
+        <div class="mt-5 flex justify-evenly gap-3">
+            <a href="" class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500 w-full">Login</a>
+            <a href="" class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600 w-full">Sign up</a>
         </div>
         <div class="absolute top-5 -right-5">
             <button class="close-side-bar" title="Close Menu"><i class="fa-solid fa-circle-left fa-2xl"></i></button>
@@ -31,9 +36,11 @@
         <div class="ml-auto navigation-tab">
             <ul class="flex gap-7">
                 <li><a href="{{route('homepage')}}">Home</a></li>
-                <li class="drp-genre">Movies<i class="fa-solid fa-angle-down ml-1 cursor-pointer"></i></li>
+                <li class="drp-genre cursor-pointer">Movies<i class="fa-solid fa-angle-down ml-1"></i></li>
                 <li><a href="">Trending</a></li>
                 <li><a href="">Latest Release</a></li>
+                <li><a href="" class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500">Login</a></li>
+                <li><a href="" class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600">Sign up</a></li>
             </ul>
         </div>
     </div>

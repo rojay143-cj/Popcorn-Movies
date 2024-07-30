@@ -9,7 +9,7 @@
     <title>@yield('title','Popmovies')</title>
     @vite('resources/css/app.css')
 </head>
-<body class="dark:bg-gray-950 text-gray-300 overflow-x-hidden overflow-y-scroll scrollbar">
+<body class="dark:bg-gray-950 text-gray-300 overflow-x-hidden overflow-y-scroll scrollbar tracking-wide">
     @yield('body')
 </body>
 </html>

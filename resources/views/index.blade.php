@@ -46,7 +46,7 @@
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/whatsapp.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
         </div>
     </div>
-    <div class="absolute w-screen bg-black top-0 z-10 opacity-65 border-b-2 shadow-xl shadow-gray-300" style="height: 43rem"></div>
+    <div class="absolute w-screen bg-black top-0 z-10 opacity-65 border-b-2 shadow-xl shadow-gray-300 min-w-96" style="height: 43rem"></div>
     <main class="flex justify-center">
         <div class="container w-7/12 mb-14 mt-5">
             <h1 class="font-bold text-center text-slate-600 p-5 text-2xl">Welcome to Popmovies - Your Premier Free Streaming Destination</h1>

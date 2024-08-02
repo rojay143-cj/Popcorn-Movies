@@ -55,3 +55,24 @@ $(function () {
     });
     handleNavBarVisibility();
 });
+
+// Sliding Banner Animation
+$(document).ready(function () {
+    const right = $('.right_');
+    const left = $('.left_');
+    const slides = $('.slider > div');
+    let index = 0;
+    let delay = 200;
+
+    function SlideShow() {
+        slides.hide().eq(index).show();
+    }
+    right.click(() => {
+        index = (index + 1) % slides.length;
+        SlideShow(index);
+    });
+    left.click(() => {
+        index = (index - 1) % slides.length;
+        SlideShow(index);
+    })
+});

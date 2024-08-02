@@ -11,5 +11,7 @@
 </head>
 <body class="dark:bg-gray-950 text-gray-300 overflow-x-hidden overflow-y-scroll scrollbar tracking-wide min-w-96">
     @yield('body')
+
+    <script src="{{asset('assets/animation/aniJS.js')}}"></script>
 </body>
 </html>

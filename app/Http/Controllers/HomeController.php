@@ -11,6 +11,8 @@ class HomeController extends Controller
         $top_4 = json_decode($Moviejson, true);
         $trend = file_get_contents(public_path('assets/trending-movies.json'));
         $trending = json_decode($trend, true);
-        return view('pages.home',compact('top_4', 'trending'));
+        $latestjson = file_get_contents(public_path('assets/latest-movies.json'));
+        $latest = json_decode($latestjson, true);
+        return view('pages.home',compact('top_4', 'trending', 'latest'));
     }
 }

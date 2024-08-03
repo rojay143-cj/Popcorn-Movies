@@ -16,8 +16,8 @@
                         <li><a href="">Trending</a></li>
                         <li><a href="">Latest Release</a></li>
                     </ul>
-                    <section class="mb-2 w-full flex mt-3">
-                        <div class="relative" style="width:600px">
+                    <section class="mb-2 w-full flex mt-5">
+                        <div class="relative w-full lg:w-[40rem]">
                             <input type="text" placeholder="Search your movie..." id="search" class="w-full h-9 rounded-lg px-5 bg-gray-800 opacity-60 pl-10">
                             <button class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -28,15 +28,16 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <div class="relative z-20" style="height: 30rem;width: 60rem">
+            <div class="relative z-20 w-full h-full md:w-[60rem] md:h-[30rem]">
                 <img src="{{asset('assets/image/Wallpaper/index_banner.svg')}}" alt="Top Anime" class="w-full h-full object-center">
             </div>
-            <div class="absolute z-20 self-end flex justify-center bottom-0">
+            <div class="absolute z-20 self-end flex justify-center bottom-3">
                 <a href="{{route('homepage')}}" class="bg-yellow-500 hover:bg-yellow-600 text-slate-700 font-bold py-2 px-4 rounded-xl">Visit Homepage <i class="fa-solid fa-circle-right fa-xl ml-2"></i></a>
             </div>
         </div>
+        <div class="blurry absolute w-screen bg-black top-0 left-0 z-10 opacity-65 border-b-2 shadow-xl shadow-gray-300 min-w-96 h-full"></div>
     </header>
-    <div class="flex justify-center z-20 relative mt-10">
+    <div class="flex justify-center z-20 relative mt-5">
         <div class="flex gap-10 justify-center">
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/facebook.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/instagram.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
@@ -46,7 +47,6 @@
             <span class="w-4 h-4"><a href=""><img src="{{asset('assets/image/icon/whatsapp.svg')}}" alt="Facebook" class="w-full h-full"></a></span>
         </div>
     </div>
-    <div class="absolute w-screen bg-black top-0 z-10 opacity-65 border-b-2 shadow-xl shadow-gray-300 min-w-96" style="height: 43rem"></div>
     <main class="flex justify-center">
         <div class="container w-7/12 mb-14 mt-5">
             <h1 class="font-bold text-center text-slate-600 p-5 text-2xl">Welcome to Popmovies - Your Premier Free Streaming Destination</h1>

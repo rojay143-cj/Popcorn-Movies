@@ -61,18 +61,24 @@ $(document).ready(function () {
     const right = $('.right_');
     const left = $('.left_');
     const slides = $('.slider > div');
+    const slidelabels = $('.sliding-label > div');
     let index = 0;
-    let delay = 200;
+    let delay = 400;
 
     function SlideShow() {
-        slides.hide().eq(index).show();
+        slides.hide().eq(index).fadeIn(delay);
+        slidelabels.removeClass('bg-yellow-600').addClass('bg-zinc-700').eq(index).removeClass('bg-zinc-700').addClass('bg-yellow-600');
     }
     right.click(() => {
         index = (index + 1) % slides.length;
         SlideShow(index);
     });
     left.click(() => {
-        index = (index - 1) % slides.length;
+        index = (index - 1 + slides.length) % slides.length;
         SlideShow(index);
     })
+    slidelabels.click(function(){
+        index = $(this).index();
+        SlideShow(index);
+    });
 });

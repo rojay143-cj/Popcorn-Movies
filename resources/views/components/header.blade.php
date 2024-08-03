@@ -1,16 +1,18 @@
 <header class="bg-zinc-900 h-16 p-5 text-sm flex justify-between shadow-2xl sticky z-50 w-screen">
     <div class="flex items-center">
         <button class="open-side-bar lg:hidden" title="Open Menu"><i class="fa-solid fa-bars fa-xl"></i></button>
-        <span class="-translate-y-1 translate-x-3 flex items-center logo"><img src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-10 h-12">
-            <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span> 
+        <a href="/" class="-translate-y-1 translate-x-3 flex items-center logo"><img
+                src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-10 h-12">
+            <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span>
             <span class="tracking-wider font-italic text-3xl font-bold text-red-600">movies</span>
-        </span>
+        </a>
     </div>
     <nav id="side-bar" class="bg-zinc-800 p-5 fixed h-full top-0 -left-96 shadow-2xl duration-500">
-        <span class="mt-5 mb-5 -translate-x-1 flex items-center logo"><img src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-10 h-12">
-            <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span> 
+        <a href="/" class="mt-5 mb-5 -translate-x-1 flex items-center logo"><img
+                src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-10 h-12">
+            <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span>
             <span class="tracking-wider font-italic text-3xl font-bold text-red-600">movies</span>
-        </span>
+        </a>
         <section class="p-5 text-lg font-thin">
             <ul class="p-2 pl-3">
                 <li class="mt-5"><a href="{{route('homepage')}}">Home</a></li>
@@ -20,14 +22,18 @@
             </ul>
         </section>
         <div class="w-full h-9 relative">
-            <input type="text" placeholder="Search your movie..." id="search" class="w-full h-9 rounded-lg px-5 bg-gray-800 opacity-60 pl-10">
+            <input type="text" placeholder="Search your movie..." id="search"
+                class="w-full h-9 rounded-lg px-5 bg-gray-800 opacity-60 pl-10">
             <button class="absolute inset-y-0 left-0 p-2 flex items-center text-gray-400 bg-gray-700 rounded-l-lg">
                 <i class="fa-solid fa-magnifying-glass text-gray-900"></i>
             </button>
         </div>
         <div class="mt-10 flex justify-evenly gap-3">
-            <a href="" class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500 w-full">Login</a>
-            <a href="" class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600 w-full">Sign up</a>
+            <a href=""
+                class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500 w-full">Login</a>
+            <a href=""
+                class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600 w-full">Sign
+                up</a>
         </div>
         <div class="absolute top-5 -right-5">
             <button class="close-side-bar" title="Close Menu"><i class="fa-solid fa-circle-left fa-2xl"></i></button>
@@ -40,12 +46,16 @@
                 <li class="drp-genre cursor-pointer">Movies<i class="fa-solid fa-angle-down ml-1"></i></li>
                 <li><a href="">Trending</a></li>
                 <li><a href="">Latest Release</a></li>
-                <li><a href="" class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500">Login</a></li>
-                <li><a href="" class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600">Sign up</a></li>
+                <li><a href=""
+                        class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500">Login</a>
+                </li>
+                <li><a href=""
+                        class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600">Sign
+                        up</a></li>
             </ul>
         </div>
     </div>
-    <div class="movies-genre hidden text-slate-400 p-3 w-screen mt-1 absolute right-0 top-14 translate-y-1 bg-slate-800">
+    <div class="movies-genre hidden text-slate-400 p-3 w-screen mt-1 absolute right-0 top-14 translate-y-1 bg-zinc-800">
         <div class="genres-content flex justify-center flex-col items-start md:flex-row">
             <div class="p-3">
                 <h4 class="text-lg font-semibold mb-2">Genre</h4>
@@ -70,14 +80,16 @@
                     </ul>
                 </div>
             </div>
+
             <div class="p-3">
                 <h4 class="text-lg font-semibold">Top Rated Movies</h4>
                 <div class="flex ml-10">
-                    <div class="top-rated border mt-5 grid grid-cols-2">
-                        @for($i = 0; $i < 4; $i++)
-                            <img src="{{asset('assets/image/empty_image/placeholder.jpg')}}" alt="Alt Here"
-                                class="border-2">
-                        @endfor
+                    <div class="top-rated mt-5 grid grid-cols-2 gap-2">
+                        @foreach ($message as $top_4)
+                            <a href="">
+                                <img src="{{$top_4['Img']}}" alt="Alt Here" class="border-2 border-zinc-900 object-cover w-full h-full lg:h-40 lg:w-52">
+                            </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -98,7 +110,7 @@
                         <li><a href="">Japan</a></li>
                         <li><a href="">Korea</a></li>
                         <li><a href="">Malaysia</a></li>
-                        <li><a href="">Philippines</a></li> 
+                        <li><a href="">Philippines</a></li>
                         <li><a href="">Singapore</a></li>
                         <li><a href="">Taiwan</a></li>
                     </ul>

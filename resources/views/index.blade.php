@@ -4,10 +4,10 @@
     <header class="bg-no-repeat bg-cover relative p-2" style="background-image: url({{asset('assets/image/Wallpaper/avanger_wall.png')}})">
         <div class="relative z-50">
             <div class="w-full h-full flex justify-center items-center flex-col">
-                <span class="flex items-center"><img src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-20 h-15">
+                <a href="/" class="flex items-center"><img src="{{asset('assets/image/logo/popcorn.png')}}" alt="Movie Online" class="w-20 h-15">
                     <span class="tracking-wider font-italic text-3xl font-bold text-yellow-500">Pop</span> 
                     <span class="tracking-wider font-italic text-3xl font-bold text-red-600">movies</span>
-                </span>
+                </a>
                 <section class="mt-5">
                     <ul class="inline-flex gap-10 text-sm font-medium flex-wrap md:flex justify-center">
                         <li><a href="{{route('homepage')}}">Home</a></li>

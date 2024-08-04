@@ -20,7 +20,7 @@
                     </i><i>TV Series</i></button>
             </div>
         </section>
-        <section class="latest_movies">
+        <section class="popular_movies">
             <div
                 class="gap-5 mx-7 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 max-h-[44rem] overflow-hidden px-3 pb-6">
                 @foreach ($latest as $new)
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section class="trending_movies">
+        <section class="latest_movies">
             <div
                 class="gap-5 mx-7 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 max-h-[44rem] overflow-hidden px-3 pb-6">
                 @foreach ($trending as $trend)

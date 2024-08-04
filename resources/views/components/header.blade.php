@@ -1,4 +1,4 @@
-<header class="bg-zinc-900 h-16 p-5 text-sm flex justify-between shadow-2xl sticky z-50 w-screen">
+<header class="bg-zinc-900 h-16 p-5 text-sm flex justify-between shadow-2xl sticky z-50">
     <div class="flex items-center">
         <button class="open-side-bar lg:hidden" title="Open Menu"><i class="fa-solid fa-bars fa-xl"></i></button>
         <a href="/" class="-translate-y-1 translate-x-3 flex items-center logo"><img

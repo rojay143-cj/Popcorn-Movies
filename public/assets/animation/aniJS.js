@@ -64,6 +64,7 @@ $(document).ready(function () {
     const slidelabels = $('.sliding-label > div');
     let index = 0;
     let delay = 400;
+    slides.hide().eq(index).show();
 
     function SlideShow() {
         slides.hide().eq(index).fadeIn(delay);

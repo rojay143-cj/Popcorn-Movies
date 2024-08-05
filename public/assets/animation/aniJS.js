@@ -64,12 +64,22 @@ $(document).ready(function () {
     const slidelabels = $('.sliding-label > div');
     let index = 0;
     let delay = 400;
-    slides.hide().eq(index).show();
 
+    function autoslideshow(){
+        autoslider = setInterval(() => {
+            index = (index + 1) % slides.length;
+            SlideShow();
+        }, 3000);
+    }
+    $('.slider').hover(function () {
+        clearInterval(autoslider);
+    }, function () {
+        autoslideshow();
+    });
     function SlideShow() {
         slides.hide().eq(index).fadeIn(delay);
         slidelabels.removeClass('bg-yellow-600').addClass('bg-zinc-700').eq(index).removeClass('bg-zinc-700').addClass('bg-yellow-600');
-    }
+    }autoslideshow();
     right.click(() => {
         index = (index + 1) % slides.length;
         SlideShow(index);
@@ -81,5 +91,19 @@ $(document).ready(function () {
     slidelabels.click(function(){
         index = $(this).index();
         SlideShow(index);
+    });
+});
+
+// Registration modal
+$(document).ready(function () {
+    $(".signup").click(function () {
+        $(".modalreg").fadeIn(200, function () {
+            $(".registrationform").slideDown();
+        });
+    });
+    $("#btn_cancel").click(function () {
+        $(".registrationform").slideUp(200, function () {
+            $(".modalreg").fadeOut();
+        });
     });
 });

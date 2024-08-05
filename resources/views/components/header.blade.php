@@ -29,11 +29,11 @@
             </button>
         </div>
         <div class="mt-10 flex justify-evenly gap-3">
-            <a href=""
-                class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500 w-full">Login</a>
-            <a href=""
-                class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600 w-full">Sign
-                up</a>
+            <button type="button"
+                class="login text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500 w-full">Login</button>
+            <button type="button"
+                class="signup text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600 w-full">Sign
+                up</button>
         </div>
         <div class="absolute top-5 -right-5">
             <button class="close-side-bar" title="Close Menu"><i class="fa-solid fa-circle-left fa-2xl"></i></button>
@@ -46,12 +46,12 @@
                 <li class="drp-genre cursor-pointer">Movies<i class="fa-solid fa-angle-down ml-1"></i></li>
                 <li><a href="">Trending</a></li>
                 <li><a href="">Latest Release</a></li>
-                <li><a href=""
-                        class="text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500">Login</a>
+                <li><button type="button"
+                        class="login text-zinc-800 bg-yellow-500 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-yellow-500">Login</button>
                 </li>
-                <li><a href=""
-                        class="text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600">Sign
-                        up</a></li>
+                <li><button type="button"
+                        class="signup text-zinc-800 bg-red-600 px-3 py-1 rounded-lg text-sm tracking-wider font-semibold hover:border-2 shadow-md shadow-red-600">Sign
+                        up</button></li>
             </ul>
         </div>
     </div>
@@ -87,7 +87,8 @@
                     <div class="top-rated mt-5 grid grid-cols-2 gap-2">
                         @foreach ($message as $top_4)
                             <a href="">
-                                <img src="{{$top_4['Img']}}" alt="Alt Here" class="border-2 border-zinc-900 object-cover w-full h-full lg:h-40 lg:w-52">
+                                <img src="{{$top_4['Img']}}" alt="Alt Here"
+                                    class="border-2 border-zinc-900 object-cover w-full h-full lg:h-40 lg:w-52">
                             </a>
                         @endforeach
                     </div>

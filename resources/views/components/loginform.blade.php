@@ -1,7 +1,7 @@
 <div class="modallogin w-full h-full fixed top-0 left-0 z-20 hidden">
     <div class="flex justify-center items-center h-full bg-zinc-800 bg-opacity-80 z-40 absolute inset-0"></div>
     <div
-        class="loginform translate-y-28 z-50 bg-gradient-to-tr from-zinc-900 to-zinc-800 rounded-md shadow-sm shadow-neutral-500 w-[30rem] h-fit p-5 mx-auto flex justify-center items-center relative">
+        class="loginform translate-y-28 z-50 bg-gradient-to-bl from-zinc-900 to-zinc-800 rounded-md shadow-sm shadow-neutral-500 w-[30rem] h-fit p-5 mx-auto flex justify-center items-center relative">
 
         <form action="" method="post">
             @csrf

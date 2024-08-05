@@ -11,28 +11,28 @@
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="displayname" class="text-zinc-400">Nickname</label>
-                    <input type="text" name="nickname" id="displayname" class="w-full h-9 rounded-lg px-5 bg-gray-300"
+                    <input type="text" name="nickname" id="displayname" class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80"
                         placeholder="Display Name">
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="e_mail" class="text-zinc-400">Email</label>
-                    <input type="email" name="email" id="e_mail" class="w-full h-9 rounded-lg px-5 bg-gray-300"
+                    <input type="email" name="email" id="e_mail" class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80"
                         placeholder="Email address">
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="user_name" class="text-zinc-400">Username</label>
-                    <input type="text" name="username" id="user_name" class="w-full h-9 rounded-lg px-5 bg-gray-300"
+                    <input type="text" name="username" id="user_name" class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80"
                         placeholder="Username">
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="pass_word" class="text-zinc-400">Password</label>
-                    <input type="password" name="password" id="pass_word" class="w-full h-9 rounded-lg px-5 bg-gray-300"
+                    <input type="password" name="password" id="pass_word" class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80"
                         placeholder="Password">
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="confirmpassword" class="text-zinc-400">Confirm Password</label>
                     <input type="password" name="confirm_password" id="confirmpassword"
-                        class="w-full h-9 rounded-lg px-5 bg-gray-300" placeholder="Confirm Password">
+                        class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80" placeholder="Confirm Password">
                 </div>
 
             </div>

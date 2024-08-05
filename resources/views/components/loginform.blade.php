@@ -11,12 +11,12 @@
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="verify" class="text-zinc-400">Email / Username</label>
-                    <input type="text" name="verify_user" id="verify" class="w-full h-9 rounded-lg px-5 bg-gray-300"
+                    <input type="text" name="verify_user" id="verify" class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80"
                         placeholder="Username or Email">
                 </div>
                 <div class="w-full flex flex-col gap-2">
                     <label for="login_pass" class="text-zinc-400">Password</label>
-                    <input type="password" name="password" id="login_pass" class="w-full h-9 rounded-lg px-5 bg-gray-300"
+                    <input type="password" name="password" id="login_pass" class="w-full h-9 rounded-lg px-5 bg-gray-300 placeholder:text-zinc-800 placeholder:opacity-80"
                         placeholder="Password">
                 </div>
             </div>

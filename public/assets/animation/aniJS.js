@@ -69,7 +69,7 @@ $(document).ready(function () {
         autoslider = setInterval(() => {
             index = (index + 1) % slides.length;
             SlideShow();
-        }, 3000);
+        }, 4000);
     }
     $('.slider').hover(function () {
         clearInterval(autoslider);
@@ -94,16 +94,37 @@ $(document).ready(function () {
     });
 });
 
-// Registration modal
+// Registration & Login modal
 $(document).ready(function () {
-    $(".signup").click(function () {
-        $(".modalreg").fadeIn(200, function () {
-            $(".registrationform").slideDown();
+    $(".login").click(function (e) {
+        e.stopPropagation();
+        $(".modallogin").fadeIn(400, function () {
+            $(".loginform").slideDown();
+        });
+        $(".modalreg").fadeOut(0);
+    });
+    $("#btn_can").click(function () {
+        $(".loginform").slideUp(200, function () {
+            $(".modallogin").fadeOut(400);
         });
     });
+
+    $(".signup").click(function (e) {
+        e.stopPropagation();
+        $(".modalreg").fadeIn(400, function () {
+            $(".registrationform").slideDown();
+        });
+        $(".modallogin").fadeOut(0);
+    });
+
     $("#btn_cancel").click(function () {
         $(".registrationform").slideUp(200, function () {
-            $(".modalreg").fadeOut();
+            $(".modalreg").fadeOut(400);
         });
+    });
+    $(document).on('click',function(e){
+        if(!$(e.target).closest('.loginform, .registrationform').length){
+            $(".modalreg, .modallogin").fadeOut();
+        }
     });
 });

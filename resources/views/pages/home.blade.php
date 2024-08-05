@@ -210,5 +210,6 @@
         </div>
     </footer>
     <x-registration />
+    <x-loginform />
 </section>
 @endsection

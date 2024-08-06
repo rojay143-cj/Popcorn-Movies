@@ -11,12 +11,30 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('poprole', function (Blueprint $table) {
+        Schema::create('role', function (Blueprint $table) {
             $table->id('role_id');
             $table->enum('role_name',['Admin', 'Guess', 'Premium']);
             $table->string('description');
             $table->timestamps();
         });
+
+        DB::table('role')->insert([
+            [
+                'role_id' => '10',
+                'role_name' => 'Guess',
+                'description' => 'Visitor'
+            ],
+            [
+                'role_id' => '100',
+                'role_name' => 'Premium',
+                'description' => 'Paid User'
+            ],
+            [   
+                'role_id' => '1000',
+                'role_name' => 'Admin', 
+                'description' => 'Owner'
+            ],
+        ]);
     }
 
     /**
@@ -24,6 +42,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('poprole');
+        Schema::dropIfExists('role');
     }
 };

@@ -13,22 +13,8 @@ return new class extends Migration
     {
         Schema::create('production', function (Blueprint $table) {
             $table->id('prod_id');
-            $table->string('director');
-            $table->string('screenwriter');
-            $table->string('gaffer');
-            $table->string('producer');
-            $table->string('editor');
-            $table->string('designer');
-            $table->string('cinematographer');
-            $table->string('composer');
-            $table->string('sound_designer');
-            $table->string('production_manager');
-            $table->string('costume_designer');
-            $table->string('makeup_artist');
-            $table->string('visual_effects_supervisor');
-            $table->string('casting_director');
-            $table->string('location_manager');
-            $table->string('production_assistant');
+            $table->string('position');
+            $table->string('name');
             $table->timestamps();
         });
         

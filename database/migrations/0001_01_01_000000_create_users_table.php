@@ -27,12 +27,12 @@ return new class extends Migration
         });
         DB::table('users')->insert([
             [
-            'role_id' => '000',
+            'role_id' => '1000',
             'nickname' => 'Admin',
             'email' => 'admin@gmail.com',
             'username' => 'admin',
             'password' => bcrypt('popadmin000@2024'),
-            'profile_img' => '/assets/image/login_profile/admin/administrator.png',
+            'profile_img' => '/assets/image/login_user/admin/administrator.png',
             'age' => '00000000',
             'gender' => 'Null',
             ]

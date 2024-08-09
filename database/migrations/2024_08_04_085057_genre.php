@@ -12,30 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('genre', function (Blueprint $table) {
-            $table->id('gen_id');
-            $table->enum('genre_name', [
-                'Action', 
-                'Adventure', 
-                'Animation', 
-                'Biography', 
-                'Comedy', 
-                'Crime', 
-                'Drama', 
-                'Fantasy', 
-                'Historical', 
-                'Horror', 
-                'Musical', 
-                'Mystery', 
-                'Romance', 
-                'Sci-Fi', 
-                'Thriller', 
-                'War', 
-                'Western', 
-                'Documentary', 
-                'Family', 
-                'Sport', 
-                'Superhero'
-            ]);
+            $table->id('genre_id')->index();
+            $table->foreignId('movie_id')->nullable();
+            $table->foreignId('series_id')->nullable();
+            $table->foreignId('country_id')->nullable();
+            $table->string('genre_name')->unique();
             $table->timestamps();
         });
         

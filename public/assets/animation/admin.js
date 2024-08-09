@@ -1,6 +1,7 @@
 $(document).ready(function(){
     new DataTable('#example');
     new DataTable('#country');
+    new DataTable('#genre');
     $('.dt-input').attr('placeholder','Type here...');
 
     setTimeout(function(){
@@ -19,6 +20,7 @@ $(function () {
         if (!$(e.target).closest('.modal-content').length) {
             $('.modal-add_role').fadeOut(150);
             $('.modal-add_country').fadeOut(150);
+            $('.modal-add_genre').fadeOut(150);
         }
     });
 });
@@ -40,8 +42,9 @@ $(document).ready(function() {
         $('.TEAM').slideUp(0);
     }
 
-
     $('#COUNTRY').on('click', function() {
+        $('.TEAM').hide();
+        localStorage.setItem('TEAM', 'false');
         $('.COUNTRY').each(function() {
             if ($(this).is(':visible')) {
                 $(this).slideUp(300);
@@ -53,6 +56,8 @@ $(document).ready(function() {
         });
     });
     $('#PRODUCTION').on('click', function() {
+        $('.COUNTRY').hide();
+        localStorage.setItem('COUNTRY', 'false');
         $('.TEAM').each(function() {
             if ($(this).is(':visible')) {
                 $(this).slideUp(300);
@@ -64,7 +69,6 @@ $(document).ready(function() {
         });
     });
 });
-
 
 // Add Production Modal
 $(function(){
@@ -102,7 +106,7 @@ $(document).ready(function() {
     })
 });
 
-// Add Production Modal
+// Add Country Modal
 $(function(){
     const addrole = $('.btn-add_country');
     const exitAdd = $('.close-modal');
@@ -124,7 +128,7 @@ $(function(){
     });
 });
 
-// Delete Production Modal & Edit modal
+// Delete Country Modal & Edit modal
 $(document).ready(function() {
     let btn_edit = $('button[class^="btn-edit_country_"]');
     let btn_delete = $('button[class^="btn-delete_country_"]');
@@ -135,5 +139,41 @@ $(document).ready(function() {
     btn_delete.click(function(){
         let country_id = $(this).attr('class').split('_').pop();
         $('.modal-delete_country_'+country_id).fadeIn(200);
+    })
+});
+
+// Add Genre Modal
+$(function(){
+    const addrole = $('.btn-add_genre');
+    const exitAdd = $('.close-modal');
+    const exitEdit = $('.close-editmodal');
+    const exitdelete = $('.close-deletemodal');
+    addrole.click(function(e){
+        $('.modal-add_genre').fadeIn(300);
+        e.stopPropagation();
+    });
+    exitAdd.click(function(e){
+        $('.modal-add_genre').fadeOut(0);
+        e.stopPropagation();
+    });
+    exitEdit.click(function(){
+        $('.closeedit').fadeOut(0);
+    });
+    exitdelete.click(function(){
+        $('.closedelete').fadeOut(0);
+    });
+});
+
+// Delete Genre Modal & Edit modal
+$(document).ready(function() {
+    let btn_edit = $('button[class^="btn-edit_genre_"]');
+    let btn_delete = $('button[class^="btn-delete_genre_"]');
+    btn_edit.click(function(){
+        let country_id = $(this).attr('class').split('_').pop();
+        $('.modal-edit_genre_'+country_id).fadeIn(200);
+    });
+    btn_delete.click(function(){
+        let country_id = $(this).attr('class').split('_').pop();
+        $('.modal-delete_genre_'+country_id).fadeIn(200);
     })
 });

@@ -12,13 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('movie', function (Blueprint $table) {
-            $table->id('mov_id');
-            $table->foreignId('cast_id')->nullable();
-            $table->foreignId('prod_id')->nullable();
-            $table->foreignId('vid_id')->nullable();
-            $table->foreignId('gen_id')->nullable();
-            $table->foreignId('country_id')->nullable();
-            $table->string('title');
+            $table->id('movie_id')->index();
+            $table->string('title')->unique();
             $table->string('description');
             $table->string('release_date');
             $table->string('rt_score');

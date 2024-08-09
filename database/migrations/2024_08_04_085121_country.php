@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('country', function (Blueprint $table) {
-            $table->id('country_id');
-            $table->string('country_name');
+            $table->id('country_id')->index();
+            $table->string('country_name')->unique();
+            $table->foreignId('movie_id')->nullable();
+            $table->foreignId('series_id')->nullable();
+            $table->foreignId('genre_id')->nullable();
             $table->timestamps();
         });
     }

@@ -13,6 +13,11 @@ class CountryController extends Controller
         if($validate->fails()){
             return redirect()->back()->with('nuetral-error', 'Some fields are empty');
         }
+        $exists = DB::table('country')->where('country_name', $request->country_name)->exists();
+
+        if ($exists) {
+            return redirect()->back()->with('error', 'Country already exists');
+        }
         $data = [
             'country_name' => $request->country_name
         ];
@@ -27,6 +32,11 @@ class CountryController extends Controller
         $validate = $request->validate([
             'country_name' => 'nullable|min:4',
         ]);
+        $exists = DB::table('country')->where('country_name', $request->country_name)->exists();
+
+        if ($exists) {
+            return redirect()->back()->with('error', 'Country already exists');
+        }
         $data = [];
         switch ($validate) {
             case $request->filled('country_name'):

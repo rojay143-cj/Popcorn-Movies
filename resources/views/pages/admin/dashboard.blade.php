@@ -5,5 +5,6 @@
     @include('pages.admin.components.sidebar')
     @include('pages.admin.components.DT_role', ['production' => $production])
     @include('pages.admin.components.country', ['countries' => $countries])
+    @include('pages.admin.components.genre',['genres' => $genres])
 </div>
 @endsection

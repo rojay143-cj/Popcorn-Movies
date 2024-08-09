@@ -15,6 +15,11 @@ class ProductionController extends Controller
         if($validate->fails()){
             return redirect()->back()->with('nuetral-error', 'Some fields are empty');
         }
+        $exists = DB::table('production')->where('name', $request->name)->exists();
+
+        if ($exists) {
+            return redirect()->back()->with('error', 'Name already exists');
+        }
         $data = [
             'name' => $request->name,
             'position' => $request->position
@@ -32,6 +37,11 @@ class ProductionController extends Controller
             'name' => 'nullable|min:4',
             'position' => 'nullable|min:4',
         ]);
+        $exists = DB::table('production')->where('name', $request->name)->exists();
+
+        if ($exists) {
+            return redirect()->back()->with('error', 'Name already exists');
+        }
         $data = [];
         switch ($validate) {
             case $request->filled('name'):

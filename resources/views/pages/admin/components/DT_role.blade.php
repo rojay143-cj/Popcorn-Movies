@@ -1,14 +1,17 @@
-<div class="TEAM ml-60 md:ml-64 lg:ml-80 xl:ml-60 w-full min-w-96 max-w-[30rem] md:max-w-[65rem] p-6 flex flex-col" style="display: none">
+<div class="TEAM ml-60 md:ml-64 lg:ml-80 xl:ml-60 w-full min-w-96 max-w-[30rem] md:max-w-[65rem] mt-10 flex flex-col"
+    style="display: none">
     <div class="flex flex-col items-center">
-        <div class="relative text-xl font-bold tracking-wide underline underline-offset-4 mb-10 mt-2 p-1 flex gap-3 text-slate-700 w-full">
-            <a href="">Dashboard</a>
-            <span><i class="fa-solid fa-caret-right"></i></span>
-            <a href="">Team</a>
-            <div class="absolute right-0 w-20 h-10">
+        <div class="w-full flex justify-between">
+            <div class="flex gap-3 text-xl font-bold tracking-wide underline underline-offset-4 mb-10 mt-2">
+                <a href="">Dashboard</a>
+                <span><i class="fa-solid fa-caret-right"></i></span>
+                <a href="">Team</a>
+            </div>
+            <div class="mt-2">
                 <button data-toggle="modal-add_role"
-                    class="btn-add_role text-nowrap w-full h-full bg-green-800 rounded-lg text-xs text-gray-200 flex justify-center items-center"
-                    aria-label="Add new role">
-                    Add Role
+                    class="btn-add_role text-nowrap p-3 bg-green-800 rounded-lg text-xs text-gray-200 flex justify-center items-center"
+                    aria-label="Add new country">
+                    Add Country
                 </button>
             </div>
         </div>

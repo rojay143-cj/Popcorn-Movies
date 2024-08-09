@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductionController;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,8 @@ Route::group(['middleware' => 'check_login'], function () {
     Route::post('/Pop Admin Panel/AddCountry', [CountryController::class, 'CountryPost'])->name('Add_Country');
     Route::post('/Pop Admin Panel/EditCountry{countryid}', [CountryController::class, 'EditCountry'])->name('Edit_Country');
     Route::post('/Pop Admin Panel/DeleteCountry/{countryid}', [CountryController::class, 'DeleteCountry'])->name('Delete_Country');
+    // Genre Routes
+    Route::post('/Pop Admin Panel/AddGenre', [GenreController::class, 'GenrePost'])->name('Add_Genre');
+    Route::post('/Pop Admin Panel/EditGenre{genreid}', [GenreController::class, 'EditGenre'])->name('Edit_Genre');
+    Route::post('/Pop Admin Panel/DeleteGenre/{genreid}', [GenreController::class, 'DeleteGenre'])->name('Delete_Genre');
 });

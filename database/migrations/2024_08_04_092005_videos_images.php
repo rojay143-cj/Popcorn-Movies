@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('videos_images', function (Blueprint $table) {
-            $table->id('vid_id');
+            $table->id('upload_id')->index();
             $table->string('poster');
             $table->string('video');
             $table->timestamps();

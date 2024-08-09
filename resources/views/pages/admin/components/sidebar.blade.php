@@ -17,7 +17,7 @@
             <li id="GENRE" class="cursor-pointer"><i class="fa-solid fa-mask"></i> Genre</a></li>
             <li id="MOVIES" class="cursor-pointer"><i class="fa-solid fa-film"></i> Movies</a></li>
             <li id="SERIES" class="cursor-pointer"><i class="fa-solid fa-tv"></i> Series</a></li>
-            <li id="V&I" class="cursor-pointer"><i class="fa-solid fa-photo-film"></i> Video & Image</a></li>
+            <li id="UPLOAD" class="cursor-pointer"><i class="fa-solid fa-photo-film"></i> Upload</a></li>
         </ul>
         <div class="mt-auto flex justify-end relative">
             <span class="cursor-pointer setting"><i class="fa-solid fa-gear"></i> Settings</span>

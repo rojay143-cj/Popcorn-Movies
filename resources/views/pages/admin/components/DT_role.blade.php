@@ -1,46 +1,52 @@
-<div class="dt-wrapper_role col-span-4 mx-10">
-    <div
-        class="relative text-xl font-bold tracking-wide underline underline-offset-4 mb-10 mt-2 p-1 flex gap-3 text-slate-700">
-        <a href="">Dashboard</a>
-        <span><i class="fa-solid fa-caret-right"></i></span>
-        <a href="">Team</a>
-        <div class="absolute right-0 w-20 h-10">
-            <button data-toggle="modal-add_role"
-                class="btn-add_role text-nowrap w-full h-full bg-green-800 rounded-lg text-xs text-gray-200 flex justify-center items-center">
-                Add Role
-            </button>
+<div class="TEAM ml-60 md:ml-64 lg:ml-80 xl:ml-60 w-full min-w-96 max-w-[30rem] md:max-w-[65rem] p-6 flex flex-col" style="display: none">
+    <div class="flex flex-col items-center">
+        <div class="relative text-xl font-bold tracking-wide underline underline-offset-4 mb-10 mt-2 p-1 flex gap-3 text-slate-700 w-full">
+            <a href="">Dashboard</a>
+            <span><i class="fa-solid fa-caret-right"></i></span>
+            <a href="">Team</a>
+            <div class="absolute right-0 w-20 h-10">
+                <button data-toggle="modal-add_role"
+                    class="btn-add_role text-nowrap w-full h-full bg-green-800 rounded-lg text-xs text-gray-200 flex justify-center items-center"
+                    aria-label="Add new role">
+                    Add Role
+                </button>
+            </div>
+        </div>
+        <div class="w-full lg:w-[65rem]">
+            <table id="example" class="display w-full">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th width="100px">Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($production as $team)
+                        <tr>
+                            <td>{{ $team->name }}</td>
+                            <td>{{ $team->position }}</td>
+                            <td class="flex justify-center gap-3">
+                                <button type="button" class="btn-edit_role_{{ $team->prod_id }}"
+                                    aria-label="Edit role for {{ $team->name }}">
+                                    <i class="fa-regular fa-pen-to-square text-slate-700"></i>
+                                </button>
+                                <button type="button" class="btn-delete_role_{{ $team->prod_id }}"
+                                    aria-label="Delete role for {{ $team->name }}">
+                                    <i class="fa-regular fa-trash-can text-red-600"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
-    <table id="example" class="display w-full">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th width="100px">Manage</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($production as $team)
-                <tr>
-                    <td>{{ $team->name }}</td>
-                    <td>{{ $team->position }}</td>
-                    <td class="flex justify-center gap-3">
-                        <button type="button" class="btn-edit_role_{{ $team->prod_id }}">
-                            <i class="fa-regular fa-pen-to-square text-slate-700"></i>
-                        </button>
-                        <button type="button" class="btn-delete_role_{{ $team->prod_id }}">
-                            <i class="fa-regular fa-trash-can text-red-600"></i>
-                        </button>
-                    </td>
-                </tr>
-            @endforeach
-
-        </tbody>
-    </table>
-    <x-check_error />
+    @include('pages.admin.components.admin_check_error')
 </div>
+
+
 @foreach ($production as $team)
-    <!-- Edit Role -->
     <div class="modal-edit_role_{{$team->prod_id}} closeedit fixed inset-0 flex items-center justify-center z-30"
         style="display: none">
         <div class="modal-content bg-stone-800 text-gray-200 rounded-lg shadow-lg w-[25rem] relative p-6 z-20">
@@ -79,7 +85,6 @@
         </div>
         <div class="absolute inset-0 bg-slate-800 opacity-50 z-10"></div>
     </div>
-    <!-- Delete Role -->
     <div class="modal-delete_role_{{$team->prod_id}} closedelete fixed inset-0 flex items-center justify-center z-30"
         style="display: none">
         <div class="modal-content bg-gray-200 text-stone-800 rounded-lg shadow-lg w-auto relative p-6 z-20">
@@ -114,8 +119,6 @@
         <div class="absolute inset-0 bg-slate-800 opacity-50 z-10"></div>
     </div>
 @endforeach
-
-<!-- Modal Add Role -->
 <div class="modal-add_role fixed inset-0 flex items-center justify-center z-30" style="display: none">
     <div class="modal-content bg-stone-800 text-gray-200 rounded-lg shadow-lg w-[25rem] relative p-6 z-20">
         <div class="modal-header flex justify-between items-center mb-6">

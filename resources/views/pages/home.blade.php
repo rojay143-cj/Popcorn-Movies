@@ -3,6 +3,7 @@
 @section('body')
 <section class="container-fluid min-w-[26rem] max-w-[120rem] overflow-hidden m-auto relative shadow-2xl shadow-red-600">
     <x-header :message="$top_4" />
+    <x-check_error />
     <main>
         <x-sliding_banner :message="$top_4" />
         <x-multi_media />

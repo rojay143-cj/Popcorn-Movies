@@ -31,7 +31,7 @@ return new class extends Migration
             'nickname' => 'Admin',
             'email' => 'admin@gmail.com',
             'username' => 'admin',
-            'password' => bcrypt('popadmin000@2024'),
+            'password' => bcrypt('pop143'),
             'profile_img' => '/assets/image/login_user/admin/administrator.png',
             'age' => '00000000',
             'gender' => 'Null',

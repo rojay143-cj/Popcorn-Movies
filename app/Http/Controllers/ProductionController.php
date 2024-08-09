@@ -8,10 +8,13 @@ use Illuminate\Support\Facades\DB;
 class ProductionController extends Controller
 {
     function AddTeam(Request $request){
-        $request->validate([
+        $validate = validator($request->all(),[
             'name' => 'required|min:4',
             'position' => 'required|min:4',
         ]);
+        if($validate->fails()){
+            return redirect()->back()->with('nuetral-error', 'Some fields are empty');
+        }
         $data = [
             'name' => $request->name,
             'position' => $request->position
@@ -43,7 +46,7 @@ class ProductionController extends Controller
         }else{
             $editteam = DB::table('production')->where('prod_id', $teamid)->update($data);
             if($editteam){
-                return redirect(route('Admin_Dashboard'))->with('success', 'Team updated successfully');
+                return redirect(route('Admin_Dashboard'))->with('success', 'Team modified successfully');
             } else {
                 return redirect(route('Admin_Dashboard'))->with('error', 'Failed to update team');
             }
@@ -55,9 +58,9 @@ class ProductionController extends Controller
         ];
         $deleteteam = DB::table('production')->where('prod_id', $data)->delete();
         if($deleteteam){
-            return redirect(route('Admin_Dashboard'))->with('success', 'Team deleted successfully');
+            return redirect(route('Admin_Dashboard'))->with('success', 'Team has been removed successfully');
         } else {
-            return redirect(route('Admin_Dashboard'))->with('error', 'Failed to delete team');
+            return redirect(route('Admin_Dashboard'))->with('error', 'Failed to remove from the team');
         }
     }
 }

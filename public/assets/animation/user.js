@@ -128,3 +128,10 @@ $(document).ready(function () {
         }
     });
 });
+
+// Error Alert
+$(document).ready(function () {
+    setTimeout(()=>{
+        $('.alert').remove();
+    },3000);
+})

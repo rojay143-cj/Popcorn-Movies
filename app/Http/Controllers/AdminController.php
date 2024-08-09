@@ -9,6 +9,7 @@ class AdminController extends Controller
 {
     public function admin_dashboard(){
         $production = DB::table('production')->get();
-        return view('pages.admin.dashboard', compact('production'));
+        $countries = DB::table('country')->get();
+        return view('pages.admin.dashboard', compact('production','countries'));
     }
 }

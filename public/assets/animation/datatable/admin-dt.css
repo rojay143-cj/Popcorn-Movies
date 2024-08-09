@@ -539,13 +539,6 @@ div.dt-container div.dt-layout-row div.dt-layout-cell:empty {
 }
 
 @media screen and (max-width: 767px) {
-  div.dt-container div.dt-layout-row:not(.dt-layout-table) {
-    display: block;
-  }
-  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell {
-    display: block;
-    text-align: center;
-  }
   div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell > * {
     margin: 0.5em 0;
   }
